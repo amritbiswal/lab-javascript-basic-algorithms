@@ -15,10 +15,16 @@ if (hacker1.length > hacker2.length) {
 
 // Iteration 3: Loops
 console.log("Shortcut approach: ", hacker1.toUpperCase().split('').join(' '));
+
 let hacker1Uppercase = '';
 for(let i = 0; i < hacker1.length; i++) {
+  if (i === hacker1.length - 1) {
+    hacker1Uppercase += hacker1[i].toUpperCase();
+  } else {
   hacker1Uppercase += (hacker1[i].toUpperCase() + ' ');
+  }
 }
+hacker1Uppercase = hacker1Uppercase.trim(); // to remove trailing space
 console.log("hacker1 name in uppercase with space: ", hacker1Uppercase);
 
 let hacker2Reversed = '';
